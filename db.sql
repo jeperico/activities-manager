@@ -1,19 +1,19 @@
 CREATE DATABASE saep_db;
 
-USE saep;
+USE saep_db;
 
 
 CREATE TABLE Teacher (
     id_teacher INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
-    email VARCHAR(100) UNIQUE NOT NULL,
-    password VARCHAR(100) NOT NULL
+    name_teacher VARCHAR(100) NOT NULL,
+    email_teacher VARCHAR(100) UNIQUE NOT NULL,
+    password_teacher VARCHAR(100) NOT NULL
 );
 
 
 CREATE TABLE Class (
     id_class INT AUTO_INCREMENT PRIMARY KEY,
-    name VARCHAR(100) NOT NULL,
+    name_class VARCHAR(100) NOT NULL,
     have_activities BOOLEAN DEFAULT FALSE,
     fk_id_teacher INT,
     FOREIGN KEY (fk_id_teacher) REFERENCES Teacher(id_teacher)
@@ -22,12 +22,12 @@ CREATE TABLE Class (
 
 CREATE TABLE Activity (
     id_activity INT AUTO_INCREMENT PRIMARY KEY,
-    description varchar(100),
+    description_activity varchar(100),
     fk_id_class INT,
     FOREIGN KEY (fk_id_class) REFERENCES Class(id_class)
 );
 
-INSERT INTO Teacher (name, email, password) 
+INSERT INTO Teacher (name_teacher, email_teacher, password_teacher) 
 VALUES 
 ('Alice Silva', 'alice.silva@escola.com', 'senha123'),
 ('Bruno Oliveira', 'bruno.oliveira@escola.com', 'senha456'),
@@ -35,7 +35,7 @@ VALUES
 ('Diego Santos', 'diego.santos@escola.com', 'senha101'),
 ('Elena Costa', 'elena.costa@escola.com', 'senha202');
 
-INSERT INTO Class (name, have_activities, fk_id_teacher)
+INSERT INTO Class (name_class, have_activities, fk_id_teacher)
 VALUES 
 ('DS1', TRUE, 1),
 ('DS2', TRUE, 2),
@@ -43,7 +43,7 @@ VALUES
 ('DS4', TRUE, 4),
 ('DS5', TRUE, 5);
 
-INSERT INTO Activity (description, fk_id_class)
+INSERT INTO Activity (description_activity, fk_id_class)
 VALUES 
 ('Atividade sobre frações', 1),
 ('Experimento de eletricidade', 2),
