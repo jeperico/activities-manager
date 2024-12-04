@@ -10,6 +10,7 @@ session_start();
     <title>Gerenciar Tarefas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/tailwind-config.js"></script>
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body class="bg-gray-200">
     <header class="bg-blue text-white p-4 grid grid-cols-header items-center">

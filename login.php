@@ -6,6 +6,7 @@
         <title>Gerenciar Tarefas</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="./assets/tailwind-config.js"></script>
+        <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
         <style>
             body {
                 background-image: url('./assets/background-login.jpg');
