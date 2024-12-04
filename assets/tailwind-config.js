@@ -9,7 +9,10 @@ tailwind.config = {
             spacing: {
                 main: '90vw',
                 mainmx: '1240px',
-            }
+            },
+            gridTemplateColumns: {
+                header: 'repeat(3, 1fr)',
+            },
         }
     }
 }

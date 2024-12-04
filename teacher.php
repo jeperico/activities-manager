@@ -11,10 +11,13 @@ session_start();
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="./assets/tailwind-config.js"></script>
 </head>
-<body>
-    <header class="bg-blue text-white p-4 flex justify-between items-center">
+<body class="bg-gray-200">
+    <header class="bg-blue text-white p-4 grid grid-cols-header items-center">
         <h1 class="text-xl"><?php echo $_SESSION['username']; ?></h1>
-        <form method="POST" action="">
+        <a href="teacher.php" class="justify-self-center">
+            <img src="./assets/logo.png" alt="Logo Sesi" class="h-16">
+        </a>
+        <form method="POST" class="justify-self-end">
             <button type="submit" name="logout" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Sair</button>
         </form>
         <?php

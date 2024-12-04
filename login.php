@@ -6,11 +6,19 @@
         <title>Gerenciar Tarefas</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <script src="./assets/tailwind-config.js"></script>
+        <style>
+            body {
+                background-image: url('./assets/background-login.jpg');
+                background-size: cover;
+                background-position: center;
+            }
+        </style>
     </head>
     <body>
         <main class="w-main m-auto max-w-mainmx h-screen py-10 flex items-center justify-center">
             <div class="bg-white p-8 rounded shadow w-full max-w-sm">
-                <h1 class="text-xl mb-4 text-center font-bold">Bem Vindo</h1>
+                <h1 class="text-4xl mb-4 text-center font-semibold text-blue">Bem Vindo</h1>
+                <img src="./assets/logo-login.png" alt="h-10">
                 <form method="POST">
                     <div class="mb-4">
                         <label for="username" class="block text-sm font-medium text-gray-700">Usuário</label>
