@@ -9,5 +9,7 @@ Na educação, a falta de organização relacionada às atividades desenvolvidas
 ## Screenshots
 
 ![Login](./assets/readme/login.png)
+
 ![Tela de cadastro](./assets/readme/register.png)
+
 ![Tela inicial](./assets/readme/home.png)
