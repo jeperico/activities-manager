@@ -15,9 +15,9 @@ session_start();
         <header class="bg-blue text-white p-4 flex justify-between items-center">
             <h1 class="text-xl"><?php echo $_SESSION['username']; ?></h1>
             <div>
-            <a href="teacher.php" class="bg-green-500 px-4 py-2 rounded ml-2">Voltar para Home</a>
+            <a href="teacher.php" class="bg-green-500 px-4 py-2 rounded ml-2 hover:bg-green-600">Voltar para Home</a>
             <form method="POST" action="" class="inline">
-                <button type="submit" name="logout" class="bg-red-500 px-4 py-2 rounded">Sair</button>
+                <button type="submit" name="logout" class="bg-red-500 px-4 py-2 rounded hover:bg-red-600">Sair</button>
             </form>
             </div>
             <?php
@@ -36,7 +36,7 @@ session_start();
                         <label for="classname" class="block text-sm font-medium text-gray-700" required>Nome da Classe</label>
                         <input type="text" id="classname" name="classname" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
                     </div>
-                    <button type="submit" class="w-full bg-blue text-white px-4 py-2 rounded">Registrar</button>
+                    <button type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Registrar</button>
                 </form>
             </div>
         </main>

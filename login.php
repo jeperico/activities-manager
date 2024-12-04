@@ -20,7 +20,7 @@
                         <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
                         <input type="password" id="password" name="password" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm" required>
                     </div>
-                    <button type="submit" class="w-full bg-blue text-white px-4 py-2 rounded">Entrar</button>
+                    <button type="submit" class="w-full bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">Entrar</button>
                 </form>
             </div>
         </main>
