@@ -14,6 +14,7 @@ CREATE TABLE Teacher (
 CREATE TABLE Class (
     id_class INT AUTO_INCREMENT PRIMARY KEY,
     name_class VARCHAR(100) NOT NULL,
+    have_activities BOOLEAN DEFAULT FALSE,
     fk_id_teacher INT,
     FOREIGN KEY (fk_id_teacher) REFERENCES Teacher(id_teacher)
 );
@@ -32,16 +33,16 @@ VALUES
 ('Bruno Oliveira', 'bruno.oliveira@escola.com', 'senha456'),
 ('Carla Ferreira', 'carla.ferreira@escola.com', 'senha789'),
 ('Diego Santos', 'diego.santos@escola.com', 'senha101'),
-('Elena Costa', 'elena.costa@escola.com', 'senha202');
+('Elena Costa', 'elena.costa@escola.com', 'senha202'),
+('Matthäus de Paula', 'matthaus_de_paula@escola.com', 'a');
 
-INSERT INTO Class (name_class, fk_id_teacher)
+INSERT INTO Class (name_class, have_activities, fk_id_teacher)
 VALUES 
-('DS1', 1),
-('DS2', 2),
-('DS3', 3),
-('DS4', 4),
-('DS5', 5);
-
+('DS1', TRUE, 1),
+('DS2', TRUE, 2),
+('DS3', TRUE, 3),
+('DS4', TRUE, 4),
+('DS5', TRUE, 5);
 
 INSERT INTO Activity (description_activity, fk_id_class)
 VALUES 

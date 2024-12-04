@@ -28,22 +28,24 @@
             session_start();
 
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                include './db/dbconnect.php';
+            include './db/dbconnect.php';
 
-                $username = mysqli_real_escape_string($conn, $_POST['username']);
-                $password = mysqli_real_escape_string($conn, $_POST['password']);
+            $username = mysqli_real_escape_string($conn, $_POST['username']);
+            $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-                $query = "SELECT * FROM Teacher WHERE name_teacher = '$username' AND password_teacher = '$password'";
-                $result = mysqli_query($conn, $query);
+            $query = "SELECT * FROM Teacher WHERE name_teacher = '$username' AND password_teacher = '$password'";
+            $result = mysqli_query($conn, $query);
 
-                if (mysqli_num_rows($result) == 1) {
-                    $_SESSION['username'] = $username;
-                    header("Location: teacher.php");
-                } else {
-                    echo "<p class='text-red-500 text-center'>Usuário ou senha inválidos</p>";
-                }
+            if (mysqli_num_rows($result) == 1) {
+                $row = mysqli_fetch_assoc($result);
+                $_SESSION['username'] = $username;
+                $_SESSION['id_teacher'] = $row['id_teacher'];
+                header("Location: teacher.php");
+            } else {
+                echo "<p class='text-red-500 text-center'>Usuário ou senha inválidos</p>";
+            }
 
-                mysqli_close($conn);
+            mysqli_close($conn);
             }
         ?>
     </body>

@@ -62,11 +62,11 @@ session_start();
                         }
                         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete_id'])) {
                             $delete_id = $_POST['delete_id'];
-                            $check_query = "SELECT fk_id_teacher FROM Class WHERE id_class = $delete_id";
+                            $check_query = "SELECT have_activities FROM Class WHERE id_class = $delete_id";
                             $check_result = mysqli_query($conn, $check_query);
                             $check_row = mysqli_fetch_assoc($check_result);
 
-                            if ($check_row['fk_id_teacher']) {
+                            if ($check_row['have_activities']) {
                                 echo "<script>alert('Você não pode excluir turmas com atividades.');</script>";
                             } else {
                                 $delete_query = "DELETE FROM Class WHERE id_class = $delete_id";
