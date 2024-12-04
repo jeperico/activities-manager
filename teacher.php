@@ -46,7 +46,7 @@ session_start();
                 <tbody>
                     <?php
                         include './db/dbconnect.php';
-                        $query = "SELECT * FROM Class";
+                        $query = "SELECT * FROM Class WHERE fk_id_teacher = {$_SESSION['id_teacher']}";
                         $result = mysqli_query($conn, $query);
                         $count = 1;
 

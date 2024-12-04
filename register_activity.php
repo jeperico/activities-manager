@@ -59,6 +59,9 @@ session_start();
             } else {
                 echo "<p class='text-red-500 text-center'>Erro ao registrar a classe</p>";
             }
+
+            $query_update = "UPDATE Class SET have_activities = TRUE WHERE id_class = $id_class";
+            mysqli_query($conn, $query_update);
         }
     ?>
 </body>
