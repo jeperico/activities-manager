@@ -51,7 +51,7 @@ session_start();
                             echo "<td class='py-2 text-center'>{$count}</td>";
                             echo "<td class='py-2 text-center'>{$row['name_class']}</td>";
                             echo "<td class='py-2 text-center flex justify-center gap-2'>
-                                <a href='visualizar_turma.php?id={$row['id_class']}' class='bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600'>Visualizar</a> ";
+                                <a href='activities.php?id={$row['id_class']}' class='bg-yellow-500 text-white px-2 py-1 rounded hover:bg-yellow-600'>Visualizar</a> ";
                                 echo "<form method='POST' onsubmit='return confirm(\"Tem certeza que deseja excluir esta turma?\")'>";
                                     echo "<input type='hidden' name='delete_id' value='{$row['id_class']}'>";
                                     echo "<button type='submit' class='bg-red-500 text-white px-2 py-1 rounded hover:bg-red-600'>Excluir</button>";
